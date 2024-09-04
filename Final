@@ -1,0 +1,61 @@
+#include <iostream>
+using namespace std;
+
+void printMenu(int& choice) {
+cout << "Welcome to my program, please select an operation to perform:" << endl;
+cout << "1. Addition" << endl;
+cout << "2. Subtraction" << endl;
+cout << "3. Multiplication" << endl;
+cout << "4. Division\n\n";
+cout << "Your selection: ";
+cin >> choice;
+}
+
+void getChoices(float& A, float& B) {
+cout << "Please enter the first value: ";
+cin >> A;
+
+cout << "Please enter the second value: ";
+cin >> B;
+// The rest of this function is an exercise to the reader
+}
+
+void Answer(float& A, float& B, float& X, int& choice)
+{
+if (choice == 1){
+cout <<"\n" <<A << " + " <<B<< " = " << X;}
+
+if (choice == 2){
+cout <<"\n" <<A << " - " <<B<< " = " << X;}
+
+if (choice == 3){
+cout <<"\n" <<A << " * " <<B<< " = " << X;}
+
+if (choice == 4){
+cout <<"\n" <<A << " / " <<B<< " = " << X;}
+}
+
+int main(){
+int choice;
+float A;
+float B;
+float X;
+
+printMenu(choice);
+getChoices(A, B);
+if (choice == 1) {
+X = A + B;
+}
+if (choice == 2) {
+X = A - B;
+}
+if (choice == 3) {
+X = A * B;
+}
+if (choice == 4){
+X = A / B;
+}
+
+Answer(A ,B , X, choice);
+return 0;
+}
